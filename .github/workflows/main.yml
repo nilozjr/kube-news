@@ -22,5 +22,5 @@ jobs:
           file: ./src/Dockerfile
           push: true
           tags: |
-            nilozjr/teste-kube-news:V1
+            nilozjr/teste-kube-news: ${{github.run.number}}
             nilozjr/teste-kube-news:latest
