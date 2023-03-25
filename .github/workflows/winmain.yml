@@ -1,0 +1,12 @@
+name: runs-on / Windows
+
+on:
+  workflow_dispatch:
+  
+jobs:
+  build:
+    runs-on: [windows]
+
+    steps:
+    - name: rodando um script
+      run: echo Runs-on no servidor local WINDOWS
