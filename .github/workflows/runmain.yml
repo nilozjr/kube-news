@@ -5,7 +5,7 @@ on:
   
 jobs:
   build:
-    runs-on: [self-hosted, ubuntu-local]
+    runs-on: [self-hosted, linux]
 
     steps:
     - name: rodando um script
