@@ -5,7 +5,10 @@ on:
   
 jobs:
   build:
-    runs-on: [self-hosted, linux]
+    runs-on: ${{ matrix.os }}
+    strategy:
+      matrix:
+        os: [self-hosted,linux,windows]
 
     steps:
     - name: rodando um script
