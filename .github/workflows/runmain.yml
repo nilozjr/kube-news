@@ -1,4 +1,4 @@
-name: hello, word
+name: runs-on
 
 on:
   workflow_dispatch:
