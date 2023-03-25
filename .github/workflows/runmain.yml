@@ -1,4 +1,4 @@
-name: runs-on
+name: runs-on / duo
 
 on:
   workflow_dispatch:
