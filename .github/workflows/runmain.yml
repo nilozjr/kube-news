@@ -5,10 +5,7 @@ on:
   
 jobs:
   build:
-    runs-on: self-hosted
-    strategy:
-      matrix:
-        os: [ubuntu-local, windows-local]
+    runs-on: [self-hosted, linux-local]
 
     steps:
     - name: rodando um script
