@@ -15,7 +15,7 @@ jobs:
     runs-on: linux
     environment:
       name: dev
-      url: 'www.cassems.com.br'
+      url: 'https://www.cassems.com.br'
     needs: build  
     steps:
     - name: rodando um script
@@ -35,7 +35,7 @@ jobs:
     runs-on: linux
     environment:
       name: prd
-      url: 'www.cassems.com.br'
+      url: 'https://www.cassems.com.br'
     needs: deploy-homol
     steps:
     - name: rodando um script
