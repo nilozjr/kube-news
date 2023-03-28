@@ -35,5 +35,10 @@ jobs:
         with:
           name: compose.yaml
           path: C:\Users\Olin\src
-      
-        
+
+  CD: 
+    runs-on: windows
+    needs: CI
+    steps:
+      - name: deploy
+        run: cd C:\Users\Olin\src && docker-compose down && docker-compose up -d
