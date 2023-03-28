@@ -24,15 +24,11 @@ jobs:
           push: true
           tags: |
             nilozjr/teste-kube-news:${{github.run_number}}
-            nilozjr/teste-kube-news:latest        
-
-  CD:
-    runs-on: linux
-    
-    steps:
+            nilozjr/teste-kube-news:latest
       - name: Upload artefato
         uses: actions/upload-artifact@v3.1.2
         with:
           name: compose.yaml
           path: ./src/docker-compose.yaml
+      
         
