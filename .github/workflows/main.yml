@@ -1,13 +1,13 @@
 name: CI-CD
 
 on:
-  workflow_dispatch:
-#  push:
-#    branches: ["main"]
+#  workflow_dispatch:
+  push:
+    branches: ["main"]
     
 jobs:
   CI: 
-    runs-on: ubuntu-latest
+    runs-on: windows
     
     steps:
       - uses: actions/checkout@v3.4.0
@@ -25,3 +25,23 @@ jobs:
           tags: |
             nilozjr/teste-kube-news:${{github.run_number}}
             nilozjr/teste-kube-news:latest
+      - name: Upload artefato
+        uses: actions/upload-artifact@v3.1.2
+        with:
+          name: compose.yaml
+          path: ./src/docker-compose.yaml
+      - name: Download a Build Artifact
+        uses: actions/download-artifact@v2.1.1
+        with:
+          name: compose.yaml
+          path: C:\Users\Olin\src
+
+  CD: 
+    runs-on: windows
+    needs: CI
+    steps:
+      - name: deploy
+        run: |
+          cd C:\Users\Olin\src
+          docker-compose down
+          docker-compose up -d
