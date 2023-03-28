@@ -30,5 +30,10 @@ jobs:
         with:
           name: compose.yaml
           path: ./src/docker-compose.yaml
+      - name: Download a Build Artifact
+        uses: actions/download-artifact@v2.1.1
+        with:
+          name: artefato
+          path: C:\Users\Olin\src
       
         
