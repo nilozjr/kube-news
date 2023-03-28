@@ -33,7 +33,7 @@ jobs:
       - name: Download a Build Artifact
         uses: actions/download-artifact@v2.1.1
         with:
-          name: artefato
+          name: compose.yaml
           path: C:\Users\Olin\src
       
         
