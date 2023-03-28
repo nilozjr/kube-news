@@ -1,0 +1,5 @@
+kube-news:
+  image: nilozjr/teste-kube-news:${{github.run_number}}
+  container_name: kubenews
+  ports:
+   - "8080:8080"
