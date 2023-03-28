@@ -1,5 +1,8 @@
-kube-news:
-  image: nilozjr/teste-kube-news:latest
-  container_name: kubenews
-  ports:
-   - "8080:8080"
+version: '3.8'  
+  services:
+
+    kube-news:
+      image: nilozjr/teste-kube-news:latest
+      container_name: kubenews
+      ports:
+        - "8080:8080"
