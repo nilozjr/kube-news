@@ -1,6 +1,5 @@
-version: '3.8'  
-  services:
-
+version: '3.7'  
+services:
     kube-news:
       image: nilozjr/teste-kube-news:latest
       container_name: kubenews
