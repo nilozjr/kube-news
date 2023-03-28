@@ -1,9 +1,9 @@
 name: CI-CD
 
 on:
-  workflow_dispatch:
-#  push:
-#    branches: ["main"]
+#  workflow_dispatch:
+  push:
+    branches: ["main"]
     
 jobs:
   CI: 
@@ -41,4 +41,7 @@ jobs:
     needs: CI
     steps:
       - name: deploy
-        run: cd C:\Users\Olin\src && docker-compose down && docker-compose up -d
+        run: |
+          cd C:\Users\Olin\src
+          docker-compose down
+          docker-compose up -d
